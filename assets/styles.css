@@ -1,0 +1,26 @@
+h1 {
+  text-align: center;
+  margin: 40px !important;
+}
+
+#sentenceContainer {
+  margin: 0 auto; 
+  text-align: center;  
+  font-size: 26px;
+  height: 40px;
+}
+
+#timerContainer {
+  margin: 0 auto; 
+  text-align: center;  
+  font-size: 26px;
+  margin-top: 50px;
+  height: 40px;
+}
+
+.text-input {
+  margin: 0 auto; 
+  display: inherit;
+  font-size: 30px;
+  width: 750px;
+}
