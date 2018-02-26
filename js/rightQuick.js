@@ -17,9 +17,9 @@ var rightQuick = {
   play: function(input) {
     if (rightQuick.playing == true) {
       sentence = [];
+      document.getElementById('enterContainer').innerHTML = "Press enter to stop"
       document.getElementById('timerContainer').innerHTML = 
       document.getElementById('inputText').value = 
-      document.getElementById('enterContainer').innerHTML = 
       document.getElementById('bspaceContainer').innerHTML = 
       document.getElementById('sentenceContainer').innerHTML = sentence.toString();
       rightQuick.counter = 0;
