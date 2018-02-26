@@ -20,6 +20,7 @@ var rightQuick = {
       document.getElementById('timerContainer').innerHTML = 
       document.getElementById('inputText').value = 
       document.getElementById('enterContainer').innerHTML = 
+      document.getElementById('bspaceContainer').innerHTML = 
       document.getElementById('sentenceContainer').innerHTML = sentence.toString();
       rightQuick.counter = 0;
       rightQuick.backspace = 0;
