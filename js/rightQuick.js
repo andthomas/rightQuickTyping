@@ -3,6 +3,8 @@ var rightQuick = {
   
   counter: 0,
   
+  backspace: 0,
+  
   scores: [],
   
   playing: false,
@@ -17,8 +19,10 @@ var rightQuick = {
       sentence = [];
       document.getElementById('timerContainer').innerHTML = 
       document.getElementById('inputText').value = 
+      document.getElementById('enterContainer').innerHTML = 
       document.getElementById('sentenceContainer').innerHTML = sentence.toString();
       rightQuick.counter = 0;
+      rightQuick.backspace = 0;
       
       for (var i = 0; i < input; i++) {
         sentence.push(" " + rightQuick.words[rightQuick.sentenceLength()]);
@@ -26,20 +30,22 @@ var rightQuick = {
       s = sentence.toString().replace(/,/g , "").toLowerCase();
       document.getElementById('sentenceContainer').innerHTML = s
     } else {
-      document.getElementById('sentenceContainer').innerHTML = "Press enter to start";
+      return
     }
   },
   
   timer: function() {  
     
-    var myVar = setInterval(function(){ myTimer() }, 1000);
+    var myVar = setInterval(function(){ myTimer() }, 100);
 
     function myTimer() {
       if (rightQuick.playing == true) {
-        rightQuick.counter ++
+        rightQuick.counter = rightQuick.counter + 0.1;;
       } else {
         var wpm = 60/rightQuick.counter * 9;
-        document.getElementById('timerContainer').innerHTML = Math.round(wpm) + " words per minute"
+        document.getElementById('timerContainer').innerHTML = (Math.round(wpm * 100)/100) + " words per minute"
+        document.getElementById('bspaceContainer').innerHTML = "Backspace was pressed " + rightQuick.backspace + " times"
+        document.getElementById('enterContainer').innerHTML = "Press enter to start a new round"
         clearInterval(myVar);
       }
     }
@@ -51,6 +57,9 @@ $('#body').keyup(function(e) {
     rightQuick.playing = !rightQuick.playing;
     rightQuick.play(10)
     rightQuick.timer()
+  }
+  if(e.which == 8) {
+    rightQuick.backspace ++
   }
 });
 
