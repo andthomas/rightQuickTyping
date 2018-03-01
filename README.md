@@ -2,6 +2,12 @@
 
 Live version: https://andthomas.github.io/rightQuickTyping/#/
 
+Built with vue, vuex, vue-persited-state.
+
+Accuracy statistic calculated with [string-similarity](https://www.npmjs.com/package/string-similarity), based on Dice's Coefficient.
+
+Graph built with [chartJS](http://www.chartjs.org/).
+
 To start:
 
 ```bash
