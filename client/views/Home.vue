@@ -54,6 +54,7 @@ export default {
     width: 100%;
     height: 78px;
     border-bottom: 1px solid rgb(224, 224, 224);
+    box-shadow: 0px 1px 5px grey;
   }
 
   #sentenceContainer {

@@ -8,10 +8,20 @@ export default {
   data() {
     return {
       xAxis:[],
+      options: {
+        scales: {
+          xAxes: [{
+            scaleLabel: {
+              display: true,
+              labelString: 'Attempt'
+            }
+          }]
+        }
+      }
     }
   },
   mounted () {
-    this.createChart();
+    this.createChart(this.options);
   },
   methods: {
     calcX() {
@@ -44,25 +54,9 @@ export default {
             data: this.$store.state.wpmRecord
           }
         ],
-        options: {
-           responsive: false,
-           beginAtZero: true
-        }
       })
     }
-  },
-  watch: {
-    update: function() {
-      this.createChart()
-      console.log('////// state updated ///////');
-    },
-    deep: true,
-  },
-  // computed: {
-  //    ...mapGetters({
-  //      update: 'getState'
-  //    })
-  //  }
+  }
 }
 
 </script>

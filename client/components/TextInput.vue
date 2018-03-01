@@ -2,7 +2,7 @@
   <div id="body" @keyup="start($event)">
     <div id="sentenceContainer" v-model="givenSentence"></div>
     <br>
-    <input autocomplete="off" id="inputText" v-model="answer" class="text-input" name="name" rows="1" cols="50" autofocus></input>
+    <input spellcheck="false" autocomplete="off" id="inputText" v-model="answer" class="text-input" name="name" rows="1" cols="50" autofocus></input>
     <div id="enterContainer" style="text-align:center">Press enter to start</div>
   </div>
 </template>
@@ -44,6 +44,7 @@ export default {
         this.$emit('inPlay', false)
         this.sentence = [];
         document.getElementById('enterContainer').innerHTML = "Press enter to stop"
+        document.getElementById("inputText").readOnly = false;
         this.answer = ""
         document.getElementById('sentenceContainer').innerHTML = this.sentence.toString();
         this.givenSentence = ""
@@ -80,6 +81,7 @@ export default {
             $this.$store.commit('ADDACCURACY', sim)
             $this.$store.commit('ADDWPM', wpm)
             $this.$emit('inPlay', true)
+            document.getElementById("inputText").readOnly = true;
             document.getElementById('enterContainer').innerHTML = "Press enter to start a new round"
           }
           $this.running = !$this.running;
