@@ -1,5 +1,7 @@
 # rightQuick2
 
+Live version: https://andthomas.github.io/rightQuickTyping/#/
+
 To start:
 
 ```bash
