@@ -11,6 +11,8 @@ Built with:
 - Accuracy statistic calculated with [string-similarity](https://www.npmjs.com/package/string-similarity), based on Dice's Coefficient.
 - Graph built with [chartJS](http://www.chartjs.org/).
 
+![Right Quick Screenshot](https://imgur.com/Fn3V6UW)
+
 To start:
 
 
