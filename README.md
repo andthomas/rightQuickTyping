@@ -2,6 +2,8 @@
 
 Live version: https://andthomas.github.io/rightQuickTyping/#/
 
+Right Quick is a game to test your typing skills with your right hand. I built this primarily as a rehabilitation tool for people recoving from a stroke.
+
 Built with:
 - VueJS
 - Vuex 
