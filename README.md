@@ -1,4 +1,4 @@
-# rightQuick2
+# Right Quick
 
 Live version: https://andthomas.github.io/rightQuickTyping/#/
 
