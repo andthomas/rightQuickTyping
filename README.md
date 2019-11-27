@@ -28,6 +28,6 @@ To build for production:
 
 ```$ npm run build```
 
-To lint you code:
+To lint your code:
 
 ```$ npm run lint```
